@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Corrales Roofing & Construction, LLC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-scroll-container>
+  <header data-scroll data-aos="fade-down">
+    <!-- same header content as index.html -->
+  </header>
+  <section id="contact" class="contact container" data-aos="fade-up">
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <label>Name</label><input type="text" name="name" required>
+      <label>Phone or Email</label><input id="phone" type="tel" required>
+      <label>Message</label><textarea name="message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+  <footer data-aos="fade-up">
+    <!-- same footer content as index.html -->
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+  <script> AOS.init({ duration:800, once:true }); new Cleave('#phone', { phone:true, phoneRegionCode:'US' }); </script>
+</body>
+</html>

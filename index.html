@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corrales Roofing & Construction</title>
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-scroll-container>
+
+  <!-- Particles Background -->
+  <div id="tsparticles"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Sticky Header -->
+  <header data-scroll data-aos="fade-down">
+    <div class="container header-content">
+      <img src="images/logo/logo.png" alt="Logo" class="logo" data-scroll data-scroll-speed="2">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home" data-scroll-to>Home</a></li>
+          <li><a href="#about" data-scroll-to>About</a></li>
+          <li><a href="#services" data-scroll-to>Services</a></li>
+          <li><a href="#gallery" data-scroll-to>Gallery</a></li>
+          <li><a href="#contact" data-scroll-to>Contact</a></li>
+        </ul>
+      </nav>
+      <button id="dark-toggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- Video Hero with Parallax -->
+  <section id="home" class="hero-video" data-rellax-speed="-3">
+    <video autoplay muted loop playsinline>
+      <source src="videos/roof-timelapse.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content" data-aos="zoom-in" data-scroll data-scroll-speed="-2">
+      <h1>Corrales Roofing & Construction, LLC</h1>
+      <p>Your trusted Kokomo roofing and construction experts since 2020.</p>
+      <a href="#contact" class="btn" data-scroll-to>Get a Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- About Section with SVG Draw -->
+  <section id="about" class="about container" data-aos="fade-up">
+    <h1>About Us</h1>
+    <div id="logo-svg-container">
+      <svg id="logo-svg" viewBox="0 0 200 50">
+        <path d="M10 10 H 190 V 40 H 10 Z" stroke="#E67E22" fill="none" stroke-width="2"/>
+      </svg>
+    </div>
+    <p>Family-owned LLC established in 2020. 5+ years of expertise in roofing & construction.</p>
+    <ul>
+      <li>Fully Insured</li>
+      <li>Free Estimates</li>
+      <li>10% Discount for Veterans, First Responders & Seniors</li>
+      <li>Owner-operated by Francisco Corrales</li>
+    </ul>
+    <div class="counter" data-target="5">0</div> <span>Years in Business</span>
+  </section>
+
+  <!-- Services with Tilt & Lottie -->
+  <section id="services" class="services container">
+    <h2 data-aos="fade-up">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item tilt" data-tilt data-aos="fade-right">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_j1adxtyb.json" background="transparent" speed="1" style="width:80px; height:80px; margin-bottom:10px;" loop autoplay></lottie-player>
+        <h3>Roofing</h3>
+        <ul>
+          <li>Installation</li>
+          <li>Repairs</li>
+          <li>Replacement</li>
+          <li>Emergency Services</li>
+        </ul>
+      </div>
+      <div class="service-item tilt" data-tilt data-aos="fade-left">
+        <i class="fas fa-hard-hat fa-3x"></i>
+        <h3>Construction</h3>
+        <ul><li>General Projects</li><li>Small Builds</li></ul>
+      </div>
+      <div class="service-item tilt" data-tilt data-aos="fade-right">
+        <i class="fas fa-search-location fa-3x"></i>
+        <h3>Consultation</h3>
+        <ul><li>Inspections</li><li>Estimates</li><li>Insurance Assist</li></ul>
+      </div>
+      <div class="service-item tilt" data-tilt data-aos="fade-left">
+        <i class="fas fa-bolt fa-3x"></i>
+        <h3>Emergency</h3>
+        <ul><li>24/7 Repair</li><li>Storm Damage</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery with Lightbox & GSAP Pin -->
+  <section id="gallery" class="gallery container">
+    <h2 data-aos="fade-up">Project Gallery</h2>
+    <div class="gallery-grid">
+      {% for i in range(1,120) %}
+      <div class="gallery-item" data-aos="zoom-in">
+        <a href="images/gallery/image ({{ i }}).jpg" class="glightbox">
+          <img src="images/gallery/image ({{ i }}).jpg" alt="Project {{ i }}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Contact with Input Mask & Live Chat -->
+  <section id="contact" class="contact container" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label>Name</label><input type="text" name="name" required>
+      <label>Phone or Email</label><input id="phone" type="tel" required>
+      <label>Message</label><textarea name="message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <footer data-aos="fade-up">
+    <div class="container footer-content">
+      <p>&copy; 2025 Corrales Roofing & Construction, LLC</p>
+      <p>765-398-8674 | 765-513-0174</p>
+      <p><a href="https://www.facebook.com/share/14GaiFt2mpG/" target="_blank"><i class="fab fa-facebook"></i> Follow us</a></p>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.3/tsparticles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+  <!-- Live chat -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true; s1.src='https://embed.tawk.to/XXXXXXXX/default';
+      s1.charset='UTF-8'; s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+  <!-- Init Scripts -->
+  <script>
+    // Locomotive Scroll
+    const loco = new LocomotiveScroll({ el: document.querySelector('[data-scroll-container]'), smooth: true });
+    // Rellax
+    new Rellax('.hero-video');
+    // GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.gallery-item').forEach(item => {
+      ScrollTrigger.create({ trigger: item, start: 'top 80%', onEnter: () => gsap.fromTo(item, { autoAlpha: 0, y: 50 }, { duration: 1, autoAlpha:1, y:0 }) });
+    });
+    // AOS
+    AOS.init({ duration: 800, once: true });
+    // Lightbox
+    GLightbox({ selector: '.glightbox', loop: true });
+    // Vanilla-Tilt
+    VanillaTilt.init(document.querySelectorAll('.tilt'), { max: 15, speed: 400 });
+    // Vivus SVG draw
+    new Vivus('logo-svg', { type: 'delayed', duration: 200 });
+    // Particle background
+    tsParticles.load('tsparticles', { particles: { number: { value: 50 }, size: { value: 3 }, move: { speed: 1 }, opacity: { value: 0.7 } } });
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {	cursor.style.top = e.clientY + 'px'; cursor.style.left = e.clientX + 'px'; });
+    // Counter
+    const counter = document.querySelector('.counter');
+    const obs = new IntersectionObserver(([e]) => { if(e.isIntersecting){ let count=0, target=+counter.dataset.target; const step=()=>{ if(count<target){ counter.textContent=++count; requestAnimationFrame(step); }}; step(); obs.disconnect(); } }, {threshold:0.5});
+    obs.observe(counter);
+    // Cleave.js
+    new Cleave('#phone', { phone: true, phoneRegionCode: 'US' });
+    // Dark mode toggle
+    document.getElementById('dark-toggle').addEventListener('click', () => document.body.classList.toggle('dark'));
+    // Sticky header hide/reveal
+    let lastScroll=0; window.addEventListener('scroll',()=>{ let st=window.scrollY; document.querySelector('header').style.top=st>lastScroll?'-80px':'0'; lastScroll=st; });
+  </script>
+</body>
+</html>

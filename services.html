@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Corrales Roofing & Construction, LLC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-scroll-container>
+  <header data-scroll data-aos="fade-down">
+    <!-- same header content as index.html -->
+  </header>
+  <section id="services" class="services container" data-aos="fade-up">
+    <h1>Our Services</h1>
+    <div class="service-grid">
+      <div class="service-item tilt" data-tilt>
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_j1adxtyb.json" background="transparent" speed="1" style="width:80px; height:80px; margin-bottom:10px;" loop autoplay></lottie-player>
+        <h3>Roofing</h3>
+      </div>
+      <div class="service-item tilt" data-tilt>
+        <i class="fas fa-hard-hat fa-3x"></i>
+        <h3>Construction</h3>
+      </div>
+      <div class="service-item tilt" data-tilt>
+        <i class="fas fa-search-location fa-3x"></i>
+        <h3>Consultation</h3>
+      </div>
+      <div class="service-item tilt" data-tilt>
+        <i class="fas fa-bolt fa-3x"></i>
+        <h3>Emergency Services</h3>
+      </div>
+    </div>
+  </section>
+  <footer data-aos="fade-up">
+    <!-- same footer content as index.html -->
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script> AOS.init({ duration:800, once:true }); VanillaTilt.init(document.querySelectorAll('.tilt'), { max:15, speed:400 }); </script>
+</body>
+</html>
